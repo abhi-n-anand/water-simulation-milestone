@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <style>
+    body {
+      padding: 100px;
+      width: 1000px;
+      margin: auto;
+      text-align: left;
+      font-weight: 300;
+      font-family: 'Open Sans', sans-serif;
+      color: #121212;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  </style>
+
+  <title>CS184 Project Milestone</title>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  </head>
+  <body>
+  <br />
+  <h1 align="middle">3D Fluid Simulation</h1>
+      <h2 align="middle">Abhi Anand, Jonathan Li, Nathan Young</h2>
+
+
+          <h2 align="middle">Overview</h2>
+      <p> Our goal for the final project is to create a particle-based 3D fluid simulator. This project is heavily influenced by Macklin and Muller's <a href="http://mmacklin.com/pbf_sig_preprint.pdf">paper</a> "Position Based Fluids."
+          The reason why we're adventuring into this space is because realistic fluid-rendering is space and time intensive. The paper offers an efficient way to model fluid interactions-- by abstracting
+          their components to particles that interact according to the forces/ constraints denoted by the following: incompressability, tensile instability, viscosity, and vorticity.
+       </p>
+
+       <div align="middle">
+       <iframe align="middle" src='https://gfycat.com/ifr/AntiqueSilverArkshell' frameborder='0' scrolling='no' allowfullscreen width='640' height='471'></iframe><p> <a href="https://gfycat.com/antiquesilverarkshell-oddlysatisfying-simulated">via Gfycat</a></p>
+       <figcaption align="middle">Realistic interaction between water particles and bounds-- goal state of our project. Sourced from Nvidia Flex.</figcaption>
+       </div>
+
+
+
+           <h2 align="middle">Current Stages</h2>
+       <p>In the current stage of the project, we have decided to switch gears from OpenGL to relying upon the structure used for the ClothSim project. The reason for this is due to our lack of prior experience with OpenGL's framework and quirks.
+         After attempting to build our project from scratch using references like LearnOpenGL, we realized that the amount of time needed to understand and develop the project is not feasible. These past two weeks have been spent on attempting to familarize ourselves
+         with the library and creating basic renderings in accordance to our code but, as of yet, we have not been able to work on the main focus of our project-- the particle-collision implementation. The results of this are displayed below. </p>
+         <div align="middle">
+           <table style="width=100%">
+             <tr>
+               <td>
+                 <img src="images/pic1.png" align="middle" width="400px"/>
+                 <figcaption align="middle">OpenGL code sample from when we attempted to structure the project.</figcaption>
+               </td>
+               <td>
+                 <img src="images/pic2.png" align="middle" width="400px"/>
+                 <figcaption align="middle">Rendering of above code sample.</figcaption>
+               </td>
+             </tr>
+         </table>
+       </div>
+
+         <p> Simply put, we're lagging from a timeline perspective. With two weeks left before the deadline, we've come to the realization that building this project from scratch won't work out for us, and have ultimately decided to work using the underlying structure of the ClothSim project.
+          This means that we will be rewriting files in order to accurately depict interactions between water particles and other surfaces using the provided libraries (CGL, GLFW, and GLSL). We will also be able to allow users to interact with the simulation using NanoGUI system from the Project 4 framework. We're currently
+        setting up the planes that will serve as a box-like structure that will contain the water particles as they fall from their initial state. </p>
+
+
+            <h2 align="middle">Milestone Slides and Video</h2>
+            <p> You can view our slides for the milestone <a href="https://docs.google.com/presentation/d/1OG5EBNvlAgH7QnSlVPFQLHWA7bWk6-GQanSyQLLGoZI/edit?usp=sharing">here.</a> </p>
+            <p> You can view our video for the milestone here. </p>
+
+
+                <h2 align="middle">Timeline Changes</h2>
+          <p>As noted above, we've had to scrap our prior plans and start with a clean slate. This means that our timeline is going to be significantly altered in order to meet our submission goal. Thus, our timeline has been modified as such: <br>
+            Thursday April 30th: Simulate water particles falling inside the created box according to rewritten mesh and without algorithm <br>
+            Sunday May 2nd: Implement the algorithm from Macklin and Muller's paper <br>
+            Tuesday May 5th: Experiment with fluids with different viscosities, compile clips for final deliverable <br>
+            Thursday May 7th: Finalize materials for deliverable and execute! <br>
+            Monday May 11th: Add additional components as denoted in the original project proposal and  compile resources in preparation for submission <br> <br>
+            Though our team has encountered difficulty in getting setup with OpenGL, we think that we're on track to use the Project 4 framework as a springboard to accomplish our goals by the deadline. Thanks for your time!</p>
